@@ -109,8 +109,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias claude="/Users/michael/.local/bin/claude"
 alias c="claude"
+
 alias n="nvim"
+alias travo="cd /Users/michael/Work/real_estate/myriad"
 
 # enabling vim editing in zsh
 bindkey -v
