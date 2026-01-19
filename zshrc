@@ -46,3 +46,8 @@ export APP_ENV=staging
 export NODE_ENV=staging
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# ALIASES
+alias c="claude"
+alias n="nvim"
+
