@@ -120,3 +120,14 @@ bindkey -v
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Note agent aliases
+alias notechat="/Users/michael/Notes/note-agent/.venv/bin/python /Users/michael/Notes/note-agent/chat.py"
+alias notevec="/Users/michael/Notes/note-agent/.venv/bin/python /Users/michael/Notes/note-agent/vectorize.py"
+
+# Daily note - creates or opens today's note
+note() {
+    local today=$(date +"%m.%d.%Y")
+    local note_file="/Users/michael/Notes/${today}.md"
+    nvim "$note_file"
+}
