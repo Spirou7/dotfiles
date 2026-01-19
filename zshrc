@@ -113,7 +113,7 @@ alias claude="/Users/michael/.local/bin/claude"
 alias c="claude"
 
 alias n="nvim"
-alias travo="cd /Users/michael/Work/real_estate/myriad"
+alias t="cd /Users/michael/Work/real_estate/myriad"
 
 # enabling vim editing in zsh
 bindkey -v
