@@ -111,9 +111,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias c="claude"
-
 alias n="nvim"
 alias t="cd /Users/michael/Work/real_estate/myriad"
+alias r="ssh ubuntu@100.53.54.8"
 
 # enabling vim editing in zsh
 bindkey -v
