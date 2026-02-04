@@ -114,9 +114,14 @@ alias c="claude"
 alias n="nvim"
 alias t="cd /Users/michael/Work/real_estate/myriad"
 alias r="ssh ubuntu@100.53.54.8"
+alias m="nvim /Users/michael/Work/scuffed-crm/mission.md"
+alias crm="cd /Users/michael/Work/scuffed-crm"
 
 # enabling vim editing in zsh
 bindkey -v
+
+# Per-pane history (don't share history between tmux panes/terminal sessions)
+unsetopt SHARE_HISTORY
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -130,4 +135,10 @@ note() {
     local today=$(date +"%m.%d.%Y")
     local note_file="/Users/michael/Notes/${today}.md"
     nvim "$note_file"
+}
+
+# Download song from YouTube
+song() {
+    source /Users/michael/Music/DJ_Music/virtual_environment/bin/activate
+    yt-dlp -o "/Users/michael/Music/DJ_Music/music/%(title)s.%(ext)s" "ytsearch1:$* audio"
 }
