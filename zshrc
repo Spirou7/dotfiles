@@ -110,8 +110,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias c="claude"
+alias c="claude --dangerously-skip-permissions"
+alias cc="claude"
 alias n="nvim"
+alias g='nvim -c "lua vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes(\" gg\", true, false, true), \"m\", false)"'
 alias t="cd /Users/michael/Work/real_estate/myriad"
 alias r="ssh ubuntu@100.53.54.8"
 alias m="nvim /Users/michael/Work/scuffed-crm/mission.md"
@@ -135,6 +137,11 @@ note() {
     local today=$(date +"%m.%d.%Y")
     local note_file="/Users/michael/Notes/${today}.md"
     nvim "$note_file"
+}
+
+unalias gc 2>/dev/null
+gc() {
+    git add . && git commit -m "$1" && git pull
 }
 
 # Download song from YouTube
